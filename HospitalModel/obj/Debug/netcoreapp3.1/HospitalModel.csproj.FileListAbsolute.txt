@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.deps.json
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.dll
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.pdb
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.dll
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.pdb
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.runtimeconfig.json
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Proiect medii\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.genruntimeconfig.cache

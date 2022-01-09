@@ -1,0 +1,108 @@
+﻿@model Bondane_Carmen_Proiect.Models.HospitalViewModels.ResidencyHospitalIndexData
+
+@{
+    ViewData["Title"] = "Residency Hospitals";
+}
+<h2>Residency Hospitals</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Residency Hospital Name</th>
+            <th>Adress</th>
+            <th>Doctors trained there</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ResidencyHospitals)
+        {
+            string selectedRow = "";
+            if (item.ResidencyHospitalID == (int?)ViewData["ResidencyHospitalID"])
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.HospitalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+
+                <td>
+                    @{
+                        foreach (var doctor in item.TrainedDoctors)
+                        {
+                            @doctor.Doctor.DoctorID @: @doctor.Doctor.DoctorName <br />
+                        }
+                    }
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@item.ResidencyHospitalID">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.ResidencyHospitalID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ResidencyHospitalID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ResidencyHospitalID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Appointments != null)
+{
+    <h3>
+        Pacients that have booked an appointment to the selected Doctor
+    </h3>
+    <table class="table">
+        <tr>
+            <th>Pacient Name</th>
+            <th>Appointment Date</th>
+        </tr>
+        @foreach (var item in Model.Appointments)
+        {
+            <tr>
+                <td>
+                    @item.Pacient.PacientName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppointmentDate)
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+@if (Model.Doctors != null)
+{
+    <h3>Doctors trained in the selected Residency Hospital</h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Specialty</th>
+        </tr>
+        @foreach (var item in Model.Doctors)
+        {
+            string selectedRow = "";
+            if (item.DoctorID == (int?)ViewData["DoctorID"])
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.ActionLink("Select", "Index", new { doctorID = item.DoctorID })
+                </td>
+                <td>
+                    @item.DoctorName
+                </td>
+                <td>
+                    @item.Specialty
+                </td>
+            </tr>
+        }
+        </table>
+}

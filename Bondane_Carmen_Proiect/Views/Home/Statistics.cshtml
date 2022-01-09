@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Bondane_Carmen_Proiect.Models.HospitalViewModels.AppointmentGroup>
+@{
+    ViewData["Title"] = "Number of pacients / date";
+}
+<h2>Number of pacients / date</h2>
+<table>
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Number of pacients
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDate)
+            </td>
+            <td>
+                @item.PacientCount
+            </td>
+        </tr>
+    }
+</table>
